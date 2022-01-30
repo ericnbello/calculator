@@ -1,8 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+:root {
+}
+
+@tailwind base;
+
+/***
+Theme Styles
+******************/
+.theme-one {
+  --color-header-100: theme('colors.white');
+
+  --color-primary-100: theme('colors.veryDarkGrayishBlueText');
+  --color-primary-200: theme('colors.veryDarkBlueMain');
+  --color-primary-300: theme('colors.lightGrayishOrangeKey');
+  --color-primary-400: theme('colors.grayishOrangeKey');
+
+  --color-secondary-100: theme('colors.white');
+  --color-secondary-200: theme('colors.veryDarkBlueAccentOne');
+  --color-secondary-300: theme('colors.darkBlueKeyBg');
+  --color-secondary-400: theme('colors.darkBlueKeyShadow');
+
+  --color-tertiary-100: theme('colors.gray.100');
+  --color-tertiary-200: theme('colors.veryDarkBlueAccentTwo');
+  --color-tertiary-300: theme('colors.redKey');
+  --color-tertiary-400: theme('colors.darkRedKey');
+
+  /* --color-neutral-100: theme('colors.gray.500');
+  --color-neutral-200: theme('colors.gray.600');
+  --color-neutral-300: theme('colors.gray.700');
+  --color-neutral-400: theme('colors.gray.800');
+  --color-neutral-500: theme('colors.gray.900'); */
+
+  --color-headerText: var(--color-header-100);
+
+  --color-primaryText: var(--color-primary-100);
+  --color-primaryBg: var(--color-primary-200);
+  --color-primaryKeyBg: var(--color-primary-300);
+  --color-primaryKeyShadow: var(--color-primary-400);
+
+  --color-secondaryText: var(--color-secondary-100);
+  --color-secondaryBg: var(--color-secondary-200);
+  --color-secondaryKeyBg: var(--color-secondary-300);
+  --color-secondaryKeyShadow: var(--color-secondary-400);
+
+  --color-tertiaryText: var(--color-tertiary-100);
+  --color-tertiaryBg: var(--color-tertiary-200);
+  --color-tertiaryKeyBg: var(--color-tertiary-300);
+  --color-tertiaryKeyShadow: var(--color-tertiary-400);
+
+  /* --color-neutralBg: var(--color-neutral-100);
+  --color-neutralBgSoft: var(--color-neutral-200);
+  --color-neutralBgSofter: var(--color-neutral-300);
+  --color-neutralSoft: var(--color-neutral-400);
+  --color-neutral: var(--color-neutral-500);
+  --color-neutralBold: var(--color-neutral-600);
+  --color-onNeutralBgSofter: var(--color-neutral-700);
+  --color-onNeutralBgSoft: var(--color-neutral-800);
+  --color-onNeutralBg: var(--color-neutral-900); */
+}
+.theme-two {
+  --color-header-100: theme('colors.veryDarkGrayishYellowText');
+
+  --color-primary-100: theme('colors.veryDarkGrayishYellowText');
+  --color-primary-200: theme('colors.lightGrayMain');
+  --color-primary-300: theme('colors.lightGrayishYellowKey');
+  --color-primary-400: theme('colors.darkGrayishOrangeKey');
+
+  --color-secondary-100: theme('colors.white');
+  --color-secondary-200: theme('colors.grayishRedAccentOne');
+  --color-secondary-300: theme('colors.darkCyanKey');
+  --color-secondary-400: theme('colors.veryDarkCyanKey');
+
+  --color-tertiary-100: theme('colors.gray.100');
+  --color-tertiary-200: theme('colors.veryLightGrayAccentTwo');
+  --color-tertiary-300: theme('colors.orangeKey');
+  --color-tertiary-400: theme('colors.darkOrangeKey');
+
+  /* --color-neutral-100: theme('colors.gray.500');
+  --color-neutral-200: theme('colors.gray.600');
+  --color-neutral-300: theme('colors.gray.700');
+  --color-neutral-400: theme('colors.gray.800');
+  --color-neutral-500: theme('colors.gray.900'); */
+
+  --color-headerText: var(--color-header-100);
+
+  --color-primaryText: var(--color-primary-100);
+  --color-primaryBg: var(--color-primary-200);
+  --color-primaryKeyBg: var(--color-primary-300);
+  --color-primaryKeyShadow: var(--color-primary-400);
+
+  --color-secondaryText: var(--color-secondary-100);
+  --color-secondaryBg: var(--color-secondary-200);
+  --color-secondaryKeyBg: var(--color-secondary-300);
+  --color-secondaryKeyShadow: var(--color-secondary-400);
+
+  --color-tertiaryText: var(--color-tertiary-100);
+  --color-tertiaryBg: var(--color-tertiary-200);
+  --color-tertiaryKeyBg: var(--color-tertiary-300);
+  --color-tertiaryKeyShadow: var(--color-tertiary-400);
+
+  /* --color-neutralBg: var(--color-neutral-100);
+  --color-neutralBgSoft: var(--color-neutral-200);
+  --color-neutralBgSofter: var(--color-neutral-300);
+  --color-neutralSoft: var(--color-neutral-400);
+  --color-neutral: var(--color-neutral-500);
+  --color-neutralBold: var(--color-neutral-600);
+  --color-onNeutralBgSofter: var(--color-neutral-700);
+  --color-onNeutralBgSoft: var(--color-neutral-800);
+  --color-onNeutralBg: var(--color-neutral-900); */
+}
+.theme-three {
+  --color-header-100: theme('colors.lightYellowText');
+
+  --color-primary-100: theme('colors.lightYellowText');
+  --color-primary-200: theme('colors.veryDarkVioletMain');
+  --color-primary-300: theme('colors.veryDarkVioletKey');
+  --color-primary-400: theme('colors.darkMagentaKey');
+
+  --color-secondary-100: theme('colors.white');
+  --color-secondary-200: theme('colors.veryDarkVioletAccent');
+  --color-secondary-300: theme('colors.darkVioletKey');
+  --color-secondary-400: theme('colors.vividMagentaKey');
+
+  --color-tertiary-100: theme('colors.veryDarkBlueText');
+  --color-tertiary-200: theme('colors.gray.200');
+  --color-tertiary-300: theme('colors.pureCyanKey');
+  --color-tertiary-400: theme('colors.softCyanKey');
+
+  /* --color-neutral-100: theme('colors.gray.500');
+  --color-neutral-200: theme('colors.gray.600');
+  --color-neutral-300: theme('colors.gray.700');
+  --color-neutral-400: theme('colors.gray.800');
+  --color-neutral-500: theme('colors.gray.900'); */
+
+  --color-headerText: var(--color-header-100);
+
+  --color-primaryText: var(--color-primary-100);
+  --color-primaryBg: var(--color-primary-200);
+  --color-primaryKeyBg: var(--color-primary-300);
+  --color-primaryKeyShadow: var(--color-primary-400);
+
+  --color-secondaryText: var(--color-secondary-100);
+  --color-secondaryBg: var(--color-secondary-200);
+  --color-secondaryKeyBg: var(--color-secondary-300);
+  --color-secondaryKeyShadow: var(--color-secondary-400);
+
+  --color-tertiaryText: var(--color-tertiary-100);
+  --color-tertiaryBg: var(--color-tertiary-200);
+  --color-tertiaryKeyBg: var(--color-tertiary-300);
+  --color-tertiaryKeyShadow: var(--color-tertiary-400);
+
+  /* --color-neutralBg: var(--color-neutral-100);
+  --color-neutralBgSoft: var(--color-neutral-200);
+  --color-neutralBgSofter: var(--color-neutral-300);
+  --color-neutralSoft: var(--color-neutral-400);
+  --color-neutral: var(--color-neutral-500);
+  --color-neutralBold: var(--color-neutral-600);
+  --color-onNeutralBgSofter: var(--color-neutral-700);
+  --color-onNeutralBgSoft: var(--color-neutral-800);
+  --color-onNeutralBg: var(--color-neutral-900); */
+}
+
+@tailwind components;
+@tailwind utilities;
+
+html{
+  @apply m-0 p-0;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  @apply flex m-0 p-0 w-screen h-screen justify-center align-middle items-center bg-primaryBg;
+  font-family: 'Spartan', sans-serif;;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,3 +180,207 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+header {
+  @apply flex justify-between p-5 py-10 bg-primaryBg;
+}
+
+header h1 {
+  @apply text-4xl text-headerText;
+}
+
+.App {
+  @apply w-full bg-primaryBg block mt-0 py-5;
+}
+
+/** Toggle Themes
+************************/
+.header-row {
+  @apply flex flex-col-reverse items-center w-screen m-0 p-0 bg-primaryBg text-headerText;
+}
+
+.toggle-container {
+  @apply flex flex-row gap-x-5 justify-between m-0 pb-0 pt-10 px-5 bg-primaryBg  w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5;
+}
+
+.header-col {
+  @apply flex flex-col;
+}
+
+#h-col-1 {
+  @apply flex flex-row justify-between gap-x-32 mt-1 py-0 text-3xl;
+}
+
+#h-col-2 {
+  @apply flex flex-row gap-x-3;
+}
+
+#theme {
+  @apply text-sm uppercase my-4;
+}
+
+.toggle-container ul {
+  @apply flex justify-center gap-x-4 p-0 m-0 text-headerText text-xs;
+}
+
+.switch-container {
+  @apply block w-full justify-center;
+}
+
+.switch-toggle {
+  @apply flex flex-row justify-evenly float-left bg-secondaryBg rounded-full border-2 h-4;
+}
+
+.switch-toggle input {
+  @apply relative opacity-0 rounded-full bg-tertiaryKeyBg text-tertiaryKeyBg;
+}
+
+.switch-toggle label {
+  @apply relative opacity-0 rounded-full bg-tertiaryKeyBg text-primaryKeyBg;
+}
+
+.switch-toggle input + label {
+  @apply flex flex-row justify-evenly p-0 rounded-full text-tertiaryKeyBg cursor-pointer;
+}
+
+.switch-toggle input:checked + label {
+  @apply bg-tertiaryKeyBg;
+}
+
+/*********/
+/* .slider {
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.switch-toggle input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+.switch-toggle input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.slider.round:before {
+  border-radius: 50%;
+} */
+
+/** 
+Calculator input/output
+************************/
+.calc-container {
+  @apply flex flex-col justify-center items-center px-6 pt-0 pb-6 m-0;
+}
+
+.input-container {
+  @apply w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5;
+}
+
+input.result {
+  @apply flex shadow-sm w-full border-solid border-2 border-neutral text-right text-3xl text-primaryText mx-0 mt-0 mb-8 py-5 rounded-lg bg-tertiaryBg;
+}
+
+.column-3 {
+  @apply mx-5;
+  width: 75%;
+  float: left;
+}
+
+.column-2 {
+  width: 50%;
+  float: left;
+}
+
+.column-1 {
+  width: 25%;
+  float: left;
+}
+
+/**
+Keypad
+******************/
+.keypad-container {
+  @apply flex justify-center;
+}
+
+.keypad {
+  @apply w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 justify-center bg-secondaryBg border-solid border-2 border-secondaryBg p-3 rounded-lg;
+  height: 40vh;
+}
+
+.calc-button {
+  @apply w-3/4 box-border m-2 rounded-lg items-center;
+  /* width: 75%; */
+  height: 90%;
+  font-size: 32px;
+  box-shadow: 0 3px;
+}
+
+.calc-button:hover {
+  @apply bg-primaryBg text-secondaryText;
+}
+
+.floaty-last {
+  @apply absolute text-primaryText;
+  /* position: absolute; */
+  right: 50px;
+  z-index: 99;
+  top: 10px;
+  /* color: #aaa;     */
+}
+
+.numeral,
+.operator,
+.decimal {
+  @apply text-primaryText bg-primaryKeyBg;
+  box-shadow: 0 3px primaryKeyShadow;
+}
+
+.delete,
+.reset {
+  @apply text-secondaryText bg-secondaryKeyBg;
+  box-shadow: 0 3px secondaryKeyShadow;
+}
+
+.reset {
+  @apply w-11/12 mr-10;
+}
+
+.equalSign {
+  @apply w-11/12 mx-0.5 text-tertiaryText bg-tertiaryKeyBg;
+  box-shadow: 0 3px tertiaryKeyShadow;
+}
+
+footer {
+  @apply flex w-screen h-full bg-primaryBg text-headerText gap-2 text-sm justify-center items-center align-middle m-0 py-10;
+}
+
+footer a {
+  @apply mb-2;
+}
+
+/*** Theme Toggle Switch 
+*************************/
+/* CHECKBOX TOGGLE SWITCH */
+/* @apply rules for documentation, these do not work as inline style */
+/* .toggle-checkbox:checked {
+  @apply: right-0 border-neutral;
+  right: 0;
+  border-color: #68D391;
+}
+.toggle-checkbox:checked + .toggle-label {
+  @apply: bg-green-400;
+  background-color: #68D391;
+} */
