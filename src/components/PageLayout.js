@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import App from '../App';
 import Footer from './Footer';
 import Header from './Header';
+/* eslint no-unused-vars: 0 */
 
 export default function PageLayout() {
     const [themeOne, setThemeOne] = useState(true);
@@ -17,7 +18,7 @@ export default function PageLayout() {
     
   return (
       <>
-        <div id="" className={switchTheme}>
+        <div className={switchTheme}>
             <Header />
             <div className='header-row'>
                 <div className="toggle-container">

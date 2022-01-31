@@ -8,7 +8,7 @@ class Footer extends Component {
                     Coded by - ericnbello 
                 </p>
                 <a href="https://github.com/ericnbello">
-                    <img src="/github.svg" width="30" height="30"/>
+                    <img src="/github.svg" width="30" height="30" alt="Github Logo"/>
                 </a>
             </footer>
         )

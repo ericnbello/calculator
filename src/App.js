@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import Button from './components/Button';
 import "./App.css";
 import "./index.css";
+/* eslint no-eval: 0 */
+/* eslint no-unused-vars: 0 */
+
+
 
 class App extends Component {
   constructor(props){
