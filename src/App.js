@@ -14,6 +14,10 @@ class App extends Component {
     }
   }
 
+  addComma = () => {
+
+  }
+
   delete = () => {
 
   }
@@ -49,7 +53,7 @@ class App extends Component {
       {symbol: '7', cols: 1, className: 'numeral', action: this.addToCurrent},
       {symbol: '8', cols: 1, className: 'numeral', action: this.addToCurrent},
       {symbol: '9', cols: 1, className: 'numeral', action: this.addToCurrent},
-      {symbol: 'DEL', cols: 1, className: 'delete', action: this.addToCurrent},
+      {symbol: 'DEL', cols: 1, className: 'delete', action: this.delete},
 
       {symbol: '4', cols: 1, className: 'numeral', action: this.addToCurrent},
       {symbol: '5', cols: 1, className: 'numeral', action: this.addToCurrent},
@@ -72,8 +76,6 @@ class App extends Component {
     
     return (
       <div className="App">
-        {/* <div className="row-container">
-        </div> */}
         <div className='calc-container'>
           <div className='input-container'>
             {this.state.previous.length > 0 ?

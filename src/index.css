@@ -21,16 +21,10 @@ Theme Styles
   --color-secondary-300: theme('colors.darkBlueKeyBg');
   --color-secondary-400: theme('colors.darkBlueKeyShadow');
 
-  --color-tertiary-100: theme('colors.gray.100');
+  --color-tertiary-100: theme('colors.white');
   --color-tertiary-200: theme('colors.veryDarkBlueAccentTwo');
   --color-tertiary-300: theme('colors.redKey');
   --color-tertiary-400: theme('colors.darkRedKey');
-
-  /* --color-neutral-100: theme('colors.gray.500');
-  --color-neutral-200: theme('colors.gray.600');
-  --color-neutral-300: theme('colors.gray.700');
-  --color-neutral-400: theme('colors.gray.800');
-  --color-neutral-500: theme('colors.gray.900'); */
 
   --color-headerText: var(--color-header-100);
 
@@ -48,16 +42,6 @@ Theme Styles
   --color-tertiaryBg: var(--color-tertiary-200);
   --color-tertiaryKeyBg: var(--color-tertiary-300);
   --color-tertiaryKeyShadow: var(--color-tertiary-400);
-
-  /* --color-neutralBg: var(--color-neutral-100);
-  --color-neutralBgSoft: var(--color-neutral-200);
-  --color-neutralBgSofter: var(--color-neutral-300);
-  --color-neutralSoft: var(--color-neutral-400);
-  --color-neutral: var(--color-neutral-500);
-  --color-neutralBold: var(--color-neutral-600);
-  --color-onNeutralBgSofter: var(--color-neutral-700);
-  --color-onNeutralBgSoft: var(--color-neutral-800);
-  --color-onNeutralBg: var(--color-neutral-900); */
 }
 .theme-two {
   --color-header-100: theme('colors.veryDarkGrayishYellowText');
@@ -77,12 +61,6 @@ Theme Styles
   --color-tertiary-300: theme('colors.orangeKey');
   --color-tertiary-400: theme('colors.darkOrangeKey');
 
-  /* --color-neutral-100: theme('colors.gray.500');
-  --color-neutral-200: theme('colors.gray.600');
-  --color-neutral-300: theme('colors.gray.700');
-  --color-neutral-400: theme('colors.gray.800');
-  --color-neutral-500: theme('colors.gray.900'); */
-
   --color-headerText: var(--color-header-100);
 
   --color-primaryText: var(--color-primary-100);
@@ -99,16 +77,6 @@ Theme Styles
   --color-tertiaryBg: var(--color-tertiary-200);
   --color-tertiaryKeyBg: var(--color-tertiary-300);
   --color-tertiaryKeyShadow: var(--color-tertiary-400);
-
-  /* --color-neutralBg: var(--color-neutral-100);
-  --color-neutralBgSoft: var(--color-neutral-200);
-  --color-neutralBgSofter: var(--color-neutral-300);
-  --color-neutralSoft: var(--color-neutral-400);
-  --color-neutral: var(--color-neutral-500);
-  --color-neutralBold: var(--color-neutral-600);
-  --color-onNeutralBgSofter: var(--color-neutral-700);
-  --color-onNeutralBgSoft: var(--color-neutral-800);
-  --color-onNeutralBg: var(--color-neutral-900); */
 }
 .theme-three {
   --color-header-100: theme('colors.lightYellowText');
@@ -124,15 +92,9 @@ Theme Styles
   --color-secondary-400: theme('colors.vividMagentaKey');
 
   --color-tertiary-100: theme('colors.veryDarkBlueText');
-  --color-tertiary-200: theme('colors.gray.200');
+  --color-tertiary-200: theme('colors.veryDarkVioletAccent');
   --color-tertiary-300: theme('colors.pureCyanKey');
   --color-tertiary-400: theme('colors.softCyanKey');
-
-  /* --color-neutral-100: theme('colors.gray.500');
-  --color-neutral-200: theme('colors.gray.600');
-  --color-neutral-300: theme('colors.gray.700');
-  --color-neutral-400: theme('colors.gray.800');
-  --color-neutral-500: theme('colors.gray.900'); */
 
   --color-headerText: var(--color-header-100);
 
@@ -150,16 +112,6 @@ Theme Styles
   --color-tertiaryBg: var(--color-tertiary-200);
   --color-tertiaryKeyBg: var(--color-tertiary-300);
   --color-tertiaryKeyShadow: var(--color-tertiary-400);
-
-  /* --color-neutralBg: var(--color-neutral-100);
-  --color-neutralBgSoft: var(--color-neutral-200);
-  --color-neutralBgSofter: var(--color-neutral-300);
-  --color-neutralSoft: var(--color-neutral-400);
-  --color-neutral: var(--color-neutral-500);
-  --color-neutralBold: var(--color-neutral-600);
-  --color-onNeutralBgSofter: var(--color-neutral-700);
-  --color-onNeutralBgSoft: var(--color-neutral-800);
-  --color-onNeutralBg: var(--color-neutral-900); */
 }
 
 @tailwind components;
@@ -200,7 +152,7 @@ header h1 {
 }
 
 .toggle-container {
-  @apply flex flex-row gap-x-5 justify-between m-0 pb-0 pt-10 px-5 bg-primaryBg  w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5;
+  @apply flex flex-row gap-x-5 justify-between m-0 pb-0 pt-10 px-5 bg-primaryBg w-4/5 sm:w-2/3 md:w-1/2 lg:w-1/3;
 }
 
 .header-col {
@@ -224,58 +176,33 @@ header h1 {
 }
 
 .switch-container {
-  @apply block w-full justify-center;
+  @apply block w-full justify-between;
 }
 
 .switch-toggle {
-  @apply flex flex-row justify-evenly float-left bg-secondaryBg rounded-full border-2 h-4;
+  @apply flex justify-between gap-x-0 bg-secondaryBg rounded-full border-2 border-secondaryBg h-4 w-full;
 }
 
 .switch-toggle input {
-  @apply relative opacity-0 rounded-full bg-tertiaryKeyBg text-tertiaryKeyBg;
+  @apply hidden opacity-0 rounded-full bg-tertiaryKeyBg;
 }
 
 .switch-toggle label {
-  @apply relative opacity-0 rounded-full bg-tertiaryKeyBg text-primaryKeyBg;
+  @apply relative opacity-100 rounded-full bg-tertiaryKeyBg text-primaryKeyBg;
 }
 
 .switch-toggle input + label {
-  @apply flex flex-row justify-evenly p-0 rounded-full text-tertiaryKeyBg cursor-pointer;
+  @apply relative gap-x-0 -mx-1 float-left clear-both p-1.5 rounded-full text-tertiaryKeyBg cursor-pointer;
 }
 
 .switch-toggle input:checked + label {
-  @apply bg-tertiaryKeyBg;
+  @apply opacity-100 bg-tertiaryKeyBg ;
+  transition: all .3s ease-out;
 }
 
-/*********/
-/* .slider {
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+.switch-toggle :not(input:checked) {
+  @apply opacity-0 bg-none;
 }
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 2rem;
-  width: 2rem;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-.switch-toggle input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-.switch-toggle input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-.slider.round:before {
-  border-radius: 50%;
-} */
 
 /** 
 Calculator input/output
@@ -285,11 +212,11 @@ Calculator input/output
 }
 
 .input-container {
-  @apply w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5;
+  @apply w-4/5 sm:w-2/3 md:w-1/2 lg:w-1/3;
 }
 
 input.result {
-  @apply flex shadow-sm w-full border-solid border-2 border-neutral text-right text-3xl text-primaryText mx-0 mt-0 mb-8 py-5 rounded-lg bg-tertiaryBg;
+  @apply flex shadow-sm w-full border-none text-right text-3xl text-headerText mx-0 mt-0 mb-8 py-5 rounded-lg bg-tertiaryBg;
 }
 
 .column-3 {
@@ -316,16 +243,13 @@ Keypad
 }
 
 .keypad {
-  @apply w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 justify-center bg-secondaryBg border-solid border-2 border-secondaryBg p-3 rounded-lg;
-  height: 40vh;
+  @apply w-4/5 sm:w-2/3 md:w-1/2 lg:w-1/3 justify-center bg-secondaryBg border-solid border-2 border-secondaryBg p-5 rounded-lg;
+  height: 45vh;
 }
 
 .calc-button {
-  @apply w-3/4 box-border m-2 rounded-lg items-center;
-  /* width: 75%; */
+  @apply w-5/6 box-border m-2 p-2 text-xl sm:text-lg sm:p-2 rounded-lg items-center;
   height: 90%;
-  font-size: 32px;
-  box-shadow: 0 3px;
 }
 
 .calc-button:hover {
@@ -334,33 +258,33 @@ Keypad
 
 .floaty-last {
   @apply absolute text-primaryText;
-  /* position: absolute; */
   right: 50px;
   z-index: 99;
   top: 10px;
-  /* color: #aaa;     */
 }
 
 .numeral,
 .operator,
 .decimal {
-  @apply text-primaryText bg-primaryKeyBg;
-  box-shadow: 0 3px primaryKeyShadow;
+  @apply text-primaryText bg-primaryKeyBg shadow-primaryKeyShadow;
 }
 
 .delete,
 .reset {
-  @apply text-secondaryText bg-secondaryKeyBg;
-  box-shadow: 0 3px secondaryKeyShadow;
+  @apply text-secondaryText bg-secondaryKeyBg shadow-secondaryKeyShadow;
 }
 
 .reset {
-  @apply w-11/12 mr-10;
+  @apply  mx-auto;
 }
 
 .equalSign {
-  @apply w-11/12 mx-0.5 text-tertiaryText bg-tertiaryKeyBg;
-  box-shadow: 0 3px tertiaryKeyShadow;
+  @apply mx-auto  text-tertiaryText bg-tertiaryKeyBg shadow-tertiaryKeyShadow;
+}
+
+.reset, 
+.equalSign {
+  @apply w-11/12 mx-2;
 }
 
 footer {
@@ -370,17 +294,3 @@ footer {
 footer a {
   @apply mb-2;
 }
-
-/*** Theme Toggle Switch 
-*************************/
-/* CHECKBOX TOGGLE SWITCH */
-/* @apply rules for documentation, these do not work as inline style */
-/* .toggle-checkbox:checked {
-  @apply: right-0 border-neutral;
-  right: 0;
-  border-color: #68D391;
-}
-.toggle-checkbox:checked + .toggle-label {
-  @apply: bg-green-400;
-  background-color: #68D391;
-} */

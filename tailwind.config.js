@@ -63,6 +63,11 @@ module.exports = {
         'lightYellowText':'#ffe53d',
         'veryDarkBlueText': '#1b2428',
       },
+      boxShadow: {
+        primaryKeyShadow: 'inset 0 -3px',
+        secondaryKeyShadow: 'inset 0 -3px',
+        tertiaryaryKeyShadow: 'inset 0 -3px',
+      },
     },
   },
   plugins: [        

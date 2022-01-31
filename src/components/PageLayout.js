@@ -14,8 +14,6 @@ export default function PageLayout() {
         themeThree ? 'theme-three' : // else if
         null // else
     )
-
-    // {themeOne ? "theme-one" : themeTwo ? "theme-two" : themeThree ? "theme-three" : "null"}
     
   return (
       <>
@@ -42,54 +40,43 @@ export default function PageLayout() {
                                 </ul>
                             </div>
                             <div className='switch-toggle'>
-                                {/* <label className='switch relative inline-block w-16 h-10 mr-4'>
-                                    <input type="checkbox">
-                                        <span className='slider cursor-pointer inset-0 absolute round rounded-full'></span>
-                                    </input>
-                                </label> */}
-                                <label for="one">*
-                                <input id="one" 
-                                        name="state-d" 
-                                        type="radio" 
-                                        value={themeOne}
-                                        checked={themeOne}
-                                        onClick={() => setThemeOne(!themeOne)}
-                                        onChange={() => setThemeOne(!themeThree)}
-                                />
-                                {/* <label for="one" onClick="">* */}
-                                {/* <span className="slider cursor-pointer inset-0 absolute round rounded-full"></span> */}
-                                </label>
+                                    <input id="one" 
+                                            className="toggle toggle-left"
+                                            name="state-d" 
+                                            type="radio" 
+                                            value={themeOne}
+                                            checked={themeOne}
+                                            onClick={() => setThemeOne(!themeOne)}
+                                            // onChange={() => setThemeOne(!themeThree)}
+                                    />
+                                    <label for="one" className="btn"></label>
                                 
-                                <label for="two">*
-                                <input id="two" 
-                                        name="state-d" 
-                                        type="radio" 
-                                        value={themeTwo}
-                                        // checked
-                                        onClick={() => setThemeOne(!themeOne)}
-                                        onChange={() => setThemeTwo(themeThree)}
-                                />
-                                {/* <label for="two" onClick="">* */}
-                                {/* <span className="slider cursor-pointer inset-0 absolute round rounded-full"></span> */}
-                                </label>
-                            
-                                <label for="three">*
-                                <input id="three" 
-                                        name="state-d" 
-                                        type="radio" 
-                                        value={themeThree}
-                                        // checked
-                                        onClick={() => setThemeTwo(!themeTwo)}
-                                        onChange={() => setThemeOne(!themeThree)}
-                                />
-                                {/* <label for="three" onClick="">* */}
-                                {/* <span className="slider cursor-pointer inset-0 absolute round rounded-full"></span> */}
-                                </label>
+                                    <input id="two" 
+                                            className="toggle toggle-middle"
+                                            name="state-d" 
+                                            type="radio" 
+                                            value={themeTwo}
+                                            // checked
+                                            onClick={() => setThemeOne(!themeOne)}
+                                            // onChange={() => setThemeTwo(themeThree)}
+                                    />
+                                    <label for="two" className="btn"> </label>
+
+                                    <input id="three" 
+                                            className="toggle toggle-right"
+                                            name="state-d" 
+                                            type="radio" 
+                                            value={themeThree}
+                                            // checked
+                                            onClick={() => setThemeTwo(!themeTwo)}
+                                            onChange={() => setThemeOne(!themeThree)}
+                                    />
+                                    <label for="three" className="btn"></label>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>   
+            </div> 
             <App />
             <Footer />
         </div>
