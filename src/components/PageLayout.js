@@ -5,9 +5,10 @@ import Header from './Header';
 /* eslint no-unused-vars: 0 */
 
 export default function PageLayout() {
+    const [setTheme] = useState(true);
     const [themeOne, setThemeOne] = useState(true);
     const [themeTwo, setThemeTwo] = useState(true);
-    const [themeThree] = useState(true);
+    const [themeThree, setThemeThree] = useState(true);
 
     const switchTheme = (
         themeOne ? 'theme-one' : // if
@@ -47,7 +48,7 @@ export default function PageLayout() {
                                             type="radio" 
                                             value={themeOne}
                                             checked={themeOne}
-                                            onClick={() => setThemeOne(!themeOne)}
+                                            onClick={() => setThemeOne(!themeTwo)}
                                             // onChange={() => setThemeOne(!themeThree)}
                                     />
                                     <label for="one" className="btn"></label>
@@ -59,10 +60,10 @@ export default function PageLayout() {
                                             value={themeTwo}
                                             // checked
                                             onClick={() => setThemeOne(!themeOne)}
-                                            // onChange={() => setThemeTwo(themeThree)}
+                                            onChange={() => setThemeTwo(themeThree)}
                                     />
                                     <label for="two" className="btn"> </label>
-
+                                    
                                     <input id="three" 
                                             className="toggle toggle-right"
                                             name="state-d" 
@@ -70,7 +71,7 @@ export default function PageLayout() {
                                             value={themeThree}
                                             // checked
                                             onClick={() => setThemeTwo(!themeTwo)}
-                                            onChange={() => setThemeOne(!themeThree)}
+                                            // onChange={() => setThemeTwo(!themeThree)}
                                     />
                                     <label for="three" className="btn"></label>
                             </div>
