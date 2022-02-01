@@ -60,7 +60,7 @@ export default function PageLayout() {
                                             value={themeTwo}
                                             // checked
                                             onClick={() => setThemeOne(!themeOne)}
-                                            onChange={() => setThemeTwo(themeThree)}
+                                            onChange={() => setThemeTwo(!themeTwo)}
                                     />
                                     <label for="two" className="btn"> </label>
                                     

@@ -5,8 +5,6 @@ import "./index.css";
 /* eslint no-eval: 0 */
 /* eslint no-unused-vars: 0 */
 
-
-
 class App extends Component {
   constructor(props){
     super(props);
@@ -14,16 +12,8 @@ class App extends Component {
     this.state = {
       current: '0',
       previous: [],
-      nextIsReset: false
+      nextIsReset: false,
     }
-  }
-
-  addComma = () => {
-
-  }
-
-  delete = () => {
-
   }
 
   reset = () => {
@@ -51,6 +41,12 @@ class App extends Component {
       this.setState({current, previous: [], nextIsReset: true});
     }
    }
+
+  delete = () => {
+    let str = this.state.current;
+    str = str.substring(0,str.length-1);
+    this.setState({current: str});
+  }
 
   render() {
     const buttons = [
@@ -85,7 +81,7 @@ class App extends Component {
             {this.state.previous.length > 0 ?
                 <div className='floaty-last'>{this.state.previous[this.state.previous.length - 1]}</div>
               : null}
-              <input className="result" type="text" value={this.state.current} />
+              <input className="result" type="text" value={this.state.current.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} />
           </div>
           <div className="keypad">
               {buttons.map((btn, i) => {
