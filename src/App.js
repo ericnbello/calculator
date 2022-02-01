@@ -73,6 +73,14 @@ class App extends Component {
       {symbol: 'RESET', cols: 2, className: 'reset', action: this.reset},
       {symbol: '=', cols: 2, className: 'equalSign', action: this.calculate},
     ];
+
+    function formatNumber(n) {
+      let parts = n.toString().split(".");
+      const numberPart = parts[0];
+      const decimalPart = parts[1];
+      const thousands = /\B(?=(\d{3})+(?!\d))/g;
+      return numberPart.replace(thousands, ",") + (decimalPart ? "." + decimalPart : "");
+  }
     
     return (
       <div className="App">
@@ -81,7 +89,7 @@ class App extends Component {
             {this.state.previous.length > 0 ?
                 <div className='floaty-last'>{this.state.previous[this.state.previous.length - 1]}</div>
               : null}
-              <input className="result" type="text" value={this.state.current.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} />
+              <input className="result" type="text" value={formatNumber(this.state.current.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 7}))} />
           </div>
           <div className="keypad">
               {buttons.map((btn, i) => {
